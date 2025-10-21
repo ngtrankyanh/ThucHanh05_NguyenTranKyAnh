@@ -8,4 +8,4 @@
 Trích dẫn nguồn AI Canva : 
 Infographic về lợi ích  công nghệ số  trong học tập được tạo bằng Canva AI.
 Nguồn AI: Canva AI https://www.canva.com
-
+Link repo : https://github.com/ngtrankyanh/ThucHanh05_NguyenTranKyAnh
