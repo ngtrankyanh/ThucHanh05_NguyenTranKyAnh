@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH05 - NHOM01 - E07</title>
+    <link rel="icon" type="image/x-icon" href="./assets/rocket-icon.ico">
+    <style>
+        :root{
+            --bg:#f5f7fb;
+            --card:#fff;
+            --accent:#0b3b8c;
+            --accent-2:#1e90ff;
+            --muted:#666;
+            --glass: rgba(255,255,255,0.6);
+        }
+        *{box-sizing:border-box}
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: var(--card);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: stretch; /* giữ 2 cột đồng cao */
+        }
+
+        /* ===== infographic column ===== */
+        figure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .infographic {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* ===== video column ===== */
+        .video-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            gap: 12px;
+        }
+        .video-wrap video {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background: #000;
+            display:block;
+            object-fit: contain;
+            max-height: 420px;
+        }
+        .video-caption { font-size:0.9rem; color:var(--muted); margin-top:8px; }
+
+        /* ===== product note (moved inside video column) =====
+           Không còn grid-column: full-width — giờ là box nằm dưới video */
+        .product-note {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 6px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgba(30,144,255,0.12), rgba(11,59,140,0.12));
+            border: 1px solid rgba(30,144,255,0.14);
+            box-shadow: 0 8px 30px rgba(30,144,255,0.08);
+            color: #04224a;
+            text-align: center;
+            gap: 6px;
+        }
+
+        /* big, "ngầu", gradient-fill main line */
+        .product-note .pn-main {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+            font-size: 1.6rem;
+            line-height: 1;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            background-color:#04224a ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 6px 20px rgba(30,144,255,0.10);
+        }
+        .product-note .pn-sub {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.95;
+        }
+
+        /* small screens: single column */
+        @media (max-width: 700px) {
+            .container { grid-template-columns: 1fr; }
+            .infographic, .video-wrap video { height: auto; object-fit: contain; }
+            .product-note { order: 2; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Infographic (left column) -->
+        <figure>
+            <img class="infographic" src="./assets/Infographic - Lợi ích Công nghệ.png" alt="Infographic about topic">
+            <figcaption>Infographic: Tóm tắt nội dung chính.</figcaption>
+        </figure>
+
+        <!-- Video (right column) -->
+        <div class="video-wrap">
+            <video controls>
+                <source src="./assets/Video tạo bởi CapCut, tài liệu từ PexelsFreeSound (CC0).mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ thẻ video. Tải video tại
+                <a href="./assets/Video tạo bởi CapCut, tài liệu từ PexelsFreeSound (CC0).mp4">đây</a>.
+            </video>
+            <p class="video-caption">Video tạo bởi CapCut, tài liệu từ Pexels/FreeSound (CC0).</p>
+
+            <!-- product-note đã được di chuyển xuống đây -->
+            <div class="product-note">
+                <div class="pn-main">NHÓM 01</div>
+                <div class="pn-sub">Môn Nền Tảng CNTT — Ý tưởng • Thiết kế • Trình bày</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

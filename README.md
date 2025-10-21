@@ -1,0 +1,1 @@
+[Nhấp vào đây để truy cập Repo của nhiệm vụ 3.2](https://github.com/ngtrankyanh/ThucHanh05_NguyenTranKyAnh)
